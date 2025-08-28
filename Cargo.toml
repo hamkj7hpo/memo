@@ -1,15 +1,17 @@
-[workspace]
-resolver = "2"
-members = ["clients/rust", "interface", "p-memo", "program"]
+[package]
+name = "spl-memo"
+version = "4.0.0"
+description = "Solana Program Library Memo Program"
+authors = ["Solana Maintainers"]
+repository = "https://github.com/hamkj7hpo/memo"
+license = "Apache-2.0"
+edition = "2021"
 
-[workspace.metadata.cli]
-solana = "2.3.4"
+[lib]
+crate-type = ["cdylib", "lib"]
 
-# Specify Rust toolchains for rustfmt, clippy, and build.
-# Any unprovided toolchains default to stable.
-[workspace.metadata.toolchains]
-format = "nightly-2025-02-16"
-lint = "nightly-2025-02-16"
+[dependencies]
+solana-program = "2.1.1"
 
-[workspace.metadata.spellcheck]
-config = "scripts/spellcheck.toml"
+[patch.crates-io]
+solana-program = { git = "https://github.com/hamkj7hpo/solana.git", branch = "safe-pump-compat" }
