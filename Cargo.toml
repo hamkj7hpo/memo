@@ -1,17 +1,18 @@
 [package]
 name = "spl-memo"
-version = "4.0.0"
-description = "Solana Program Library Memo Program"
-authors = ["Solana Maintainers"]
+version = "6.0.0"
+description = "Solana Program Library Memo"
+authors = ["Solana Labs Maintainers <maintainers@solanalabs.com>"]
 repository = "https://github.com/hamkj7hpo/memo"
 license = "Apache-2.0"
 edition = "2021"
 
-[lib]
-crate-type = ["cdylib", "lib"]
+[features]
+no-entrypoint = []
 
 [dependencies]
-solana-program = "2.1.1"
-
-[patch.crates-io]
 solana-program = { git = "https://github.com/hamkj7hpo/solana.git", branch = "safe-pump-compat" }
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "spl_memo"
