@@ -18,4 +18,4 @@ crate-type = ["cdylib", "lib"]
 name = "spl_memo"
 
 [patch.crates-io]
-zeroize = "1.3.0"
+zeroize = { version = "=1.3.0" }
