@@ -16,3 +16,6 @@ solana-program = { git = "https://github.com/hamkj7hpo/solana.git", branch = "sa
 [lib]
 crate-type = ["cdylib", "lib"]
 name = "spl_memo"
+
+[patch.crates-io]
+zeroize = "1.3.0"
