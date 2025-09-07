@@ -11,7 +11,7 @@ edition = "2021"
 no-entrypoint = []
 
 [dependencies]
-solana-program = { git = "https://github.com/hamkj7hpo/solana.git", rev = "079536b9" }
+solana-program = { git = "ssh://git@github.com/hamkj7hpo/solana.git", branch = "safe-pump-compat" }
 
 [lib]
 crate-type = ["cdylib", "lib"]
